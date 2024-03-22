@@ -53,6 +53,8 @@ const Home = () => {
       body: JSON.stringify({ history, send_message }),
     })
 
+    console.log("Gemini replied...", response);
+
     const data = await response.json();
     const { output } = data;
     setFormData(JSON.parse(output))
