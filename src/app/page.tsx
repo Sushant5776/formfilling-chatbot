@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import ContactForm from './components/ContactForm'
-import Chatbot from './components/ChatBoat'
+import Chatbot from './components/ChatBot'
 
 interface FormData {
   name: string;

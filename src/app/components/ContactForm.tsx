@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 
-const ContactForm: React.FC = ({formData, setFormData}: any) => {
+const ContactForm: React.FC<{formData: any, setFormData: any}> = ({formData, setFormData}) => {
   
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

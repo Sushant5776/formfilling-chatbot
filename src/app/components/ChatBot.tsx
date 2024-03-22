@@ -1,35 +1,7 @@
 "use client"
 
-const Chatbot: React.FC = ({messages, theInput, isLoading, setTheInput, Submit, callGetResponse} : any) => {
+const Chatbot: React.FC<{messages: any, theInput: string, isLoading: boolean, setTheInput: (val: string) => void, Submit: (event: React.KeyboardEvent<HTMLTextAreaElement>) => void, callGetResponse: () => void}> = ({messages, theInput, isLoading, setTheInput, Submit, callGetResponse}) => {
   return (
-    // <div className="max-w-sm mx-auto p-4 bg-indigo-200 rounded-lg shadow-md text-zinc-700">
-    //   <div className="h-40 overflow-y-auto">
-    //     {messages.map((message) => (
-    //       <div
-    //         key={message.id}
-    //         className={`mb-2 p-2 w-fit rounded-lg ${message.sender === 'user' ? 'bg-blue-300 self-end' : 'bg-indigo-200 self-start'
-    //           }`}
-    //       >
-    //         <p className="text-sm">{message.text}</p>
-    //       </div>
-    //     ))}
-    //   </div>
-    //   <form onSubmit={handleMessageSubmit} className="mt-4 flex">
-    //     <input
-    //       type="text"
-    //       value={inputText}
-    //       onChange={(e) => setInputText(e.target.value)}
-    //       placeholder="Type your message..."
-    //       className="flex-grow p-2 mr-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-    //     />
-    //     <button
-    //       type="submit"
-    //       className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-    //     >
-    //       Send
-    //     </button>
-    //   </form>
-    // </div>
       <div
         className="flex h-[25rem] w-[25rem] flex-col items-center bg-gray-600 rounded-xl"
       >
