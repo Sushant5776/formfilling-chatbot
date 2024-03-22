@@ -37,7 +37,7 @@ const Home = () => {
   const callGetResponse = async () => {
     setIsLoading(true);
     let temp = messages;
-    let send_message = `extract details like name, email, phone number, and address from the input: ${theInput} along with one liner response for which if no info is extracted from the input then fill keys in json response with null and use input and generate appropriate content to ask for info or greet him about I am excited to help you etc. in user_inform_response key this key should never be empty and respond with the extracted details as json with keys name, email, phone, and address, user_inform_response in {"name": "", email:"", phone:"", address:"", user_inform_response:""} strictly provide json object only by filling appropriate keys and without any other character.`;
+    let send_message = `extract details like name, email, phone number, and address from the input: ${theInput} along with one liner response for which if no info is extracted from the input then fill keys in json response with null and use input and generate appropriate content to ask for info or greet him about I am excited to help you etc. in user_inform_response key this key should never be empty and respond with the extracted details as json with keys name, email, phone, and address, user_inform_response in {"name": "", email:"", phone:"", address:"", user_inform_response:""} strictly provide json object only by filling appropriate keys and without any other character. Never return anything other than a json object.`;
     let history = messages;
     temp.push({ role: "user", parts: [{text: theInput}] });
 		setMessages(temp)
